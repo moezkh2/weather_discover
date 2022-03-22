@@ -2,8 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Card_Container = styled.div`
-width: 15rem;
-height: 18rem;
+
+padding: 10px;
+width: 10rem;
+height: 15rem;
   display: grid;
   grid-template-columns: 1fr 1fr ;
   grid-template-rows: 20% 1fr 1fr;
@@ -15,20 +17,22 @@ height: 18rem;
   box-shadow: 10px 10px 100px -24px rgba(0,0,0,0.41);
 -webkit-box-shadow: 10px 10px 100px -24px rgba(0,0,0,0.41);
 -moz-box-shadow: 10px 10px 100px -24px rgba(0,0,0,0.41);
-  `;
+background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  
+`;
 const Date = styled.h1`
-grid-column:1/3
+grid-column:1/3;
+color: white;
+margin-bottom: 0px;
   `;
-const Temperature_container = styled.div`
-display: flex;
-align-items: baseline
 
-`
 const Main_status = styled.h1`
-margin-top: 0px
+margin-top: 0px;
+color: white;
 `
 const Icon = styled.img.attrs(props => ({
-    src: "http://openweathermap.org/img/wn/10d@2x.png",
+    src: `http://openweathermap.org/img/wn/${props.icon}@2x.png`,
     alt: "icon"
 }))`
 height:150%;
@@ -39,45 +43,47 @@ grid-column:1/3
 const Main = styled.div`
 grid-row: 3;
 `
-const Max_temperature = styled.h1`
-margin-right: 10px;`
-const Min_temperature = styled.h2`
-color:grey;
+const Temperature_container = styled.div`
+display: flex;
+align-items: baseline;
 `
-const Details_container = styled.div`
-grid-row: 3;`
-const Details = styled.div`
-font-size:1.1rem;
-font-weight:bold;
-line-height: 200%;
-color:grey;
+const Max_temperature = styled.span`
+font-size:1.8rem;
+margin-right: 10px;
+color: white;
+`
+const Min_temperature = styled.span`
+font-size:1.4rem;
+color: white;
 `
 
-const Card = () => {
+const Card = ({ weather = {
+    date: 1210981217,
+    iconId: "10d",
+    maxT: "21°",
+    minT: "13°",
+    mStatus: "Cloudy",
+    pressure: "1017",
+    humidity: "51",
+    wSpeed: "3"
+} }) => {
+
+    const date = new window.Date(weather.date * 1000);
+
     return (
         <Card_Container>
 
-            <Date>Mon 14</Date>
-            <Icon ></Icon>
+            <Date>{date.toLocaleDateString("en-US", { day: 'numeric', weekday: 'short' })}</Date>
+            <Icon icon={weather.iconId}></Icon>
 
             <Main>
                 <Temperature_container>
-
-                    <Max_temperature>21°</Max_temperature>
-                    <Min_temperature>13°</Min_temperature>
-
+                    <Max_temperature>{weather.maxT.toFixed(1)}°C</Max_temperature>
+                    <Min_temperature>{weather.minT.toFixed(1)}°C</Min_temperature>
                 </Temperature_container>
 
-                <Main_status>Cloudy</Main_status>
+                <Main_status>{weather.mStatus}</Main_status>
             </Main>
-
-
-            <Details_container>
-                <Details>Pressure: 1017</Details>
-                <Details>Humidity: 51</Details>
-                <Details>Wind_speed: 3</Details>
-            </Details_container>
-
 
         </Card_Container>
     )
