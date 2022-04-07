@@ -5,26 +5,26 @@ import { CoordinatesContext } from './CoordinatesContext'
 
 const InputContainer = styled.div`
 grid-row: 1;
-background-color: #fff;
 width: fit-content;
 `
-const Label = styled.label`
-font-size: 20px;
-line-height: 25px;
-color: #99a3ba;
-`
 const Input = styled.input`
+background-color:rgba(0, 0, 0, 0);
+color:white;
 padding: 10px;
-border: 1px solid #cdd9ed;
-width: 13.5rem;
+border: 0;
+outline: 0;
+border-bottom: 2px solid black;
+width: 15.5rem;
+::placeholder {
+    color: white;
+  }
 `
-
 const Seggestion = styled.div`
 display: ${props => props.show ? "block" : "none"};
 position: absolute;
-width: 14.6rem;
+width: 16.6rem;
 background-color: #fff;
-margin-left: 5.5rem;
+
 z-index: 1`
 
 const SegItem = styled.div`
@@ -104,8 +104,8 @@ const InputAuto = () => {
     return (
 
         <InputContainer>
-            <Label for="input">Location : </Label>
-            <Input id="input" value={inputState} type="text" onChange={onChangehendler}></Input>
+            {/*  <Label for="input">Location : </Label> */}
+            <Input id="input" placeholder="Enter Location" value={inputState} type="text" onChange={onChangehendler}></Input>
 
             <Seggestion show={showSeggestions}>
 

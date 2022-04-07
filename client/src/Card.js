@@ -2,34 +2,29 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Card_Container = styled.div`
-
 padding: 10px;
 width: 10rem;
-height: 15rem;
+height: 14rem;
   display: grid;
   grid-template-columns: 1fr 1fr ;
   grid-template-rows: 20% 1fr 1fr;
-  background-color: white;
   border-radius:10px;
   align-items: center;
   justify-items: center;
   align-content: center;
-  box-shadow: 10px 10px 100px -24px rgba(0,0,0,0.41);
--webkit-box-shadow: 10px 10px 100px -24px rgba(0,0,0,0.41);
--moz-box-shadow: 10px 10px 100px -24px rgba(0,0,0,0.41);
 background-color: #D9AFD9;
 background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
   
 `;
 const Date = styled.h1`
 grid-column:1/3;
-color: white;
+color: #5e5e5e;
 margin-bottom: 0px;
   `;
 
 const Main_status = styled.h1`
 margin-top: 0px;
-color: white;
+color: #282525;
 `
 const Icon = styled.img.attrs(props => ({
     src: `http://openweathermap.org/img/wn/${props.icon}@2x.png`,
@@ -50,11 +45,11 @@ align-items: baseline;
 const Max_temperature = styled.span`
 font-size:1.8rem;
 margin-right: 10px;
-color: white;
+color: #0b6e61;
 `
 const Min_temperature = styled.span`
 font-size:1.4rem;
-color: white;
+color: #0b6e61;
 `
 
 const Card = ({ weather = {

@@ -1,5 +1,5 @@
 /* import './App.css'; */
-import { useEffect, useContext, useRef, useState } from 'react';
+import { useEffect, useContext } from 'react';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import useWindowSize from './useWindowSize'
 import Card from './Card'
@@ -10,12 +10,14 @@ import axios from 'axios';
 import MainCard from './MainCard';
 const MainContainer = styled.div`
 display:grid;
-grid-template-rows: auto% auto% auto;
+grid-template-rows: 10vh 50vh 1fr;
+width:100vw;
 justify-content: center;
 align-items: center;
 justify-items: center;
 `
 const Carousel = styled.div`
+
 position: relative;
 grid-row: 3;
 `
@@ -71,7 +73,7 @@ function App() {
 
       const response = await axios.get(`/weather/${coordinates.lat}/${coordinates.lng}`);
       setWeatherData(response.data.daily)
-      console.log(response.data.daily)
+      console.log(response)
 
     } catch (error) {
       console.log("can't get weather data")
@@ -111,7 +113,7 @@ function App() {
       /> : null}
 
 
-      <Carousel >
+      <Carousel  >
 
         <ScrollLeft isScrollVissible={isScrollVissible} >
           <AiOutlineArrowLeft onClick={() => sideScroll(reff, 25, 150, -10)} size={28} />
