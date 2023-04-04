@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useContext } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
-import { CoordinatesContext } from './CoordinatesContext'
+import { CoordinatesContext } from '../context/CoordinatesContext'
 
 const InputContainer = styled.div`
 grid-row: 1;
 width: fit-content;
 `
 const Input = styled.input`
+font-size:1.5rem;
 background-color:rgba(0, 0, 0, 0);
 color:white;
 padding: 10px;

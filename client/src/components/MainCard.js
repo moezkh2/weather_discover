@@ -18,7 +18,7 @@ const Details_container = styled.div`
 grid-row: 2;`
 
 const Details = styled.div`
-font-size:1.3rem;
+font-size:1rem;
 font-weight:bold;
 line-height: 200%;
 color: #480606;`
@@ -96,8 +96,8 @@ const MainCard = (
 
             <Icon icon={weather.iconId}></Icon>
             <Details_container>
-                <Details>Pressure:< Details_values> {weather.pressure} hPa</Details_values> </Details>
-                <Details>Humidity:<Details_values> {weather.humidity} %</Details_values></Details>
+                <Details>Pressure:< Details_values> {weather.pressure}hPa</Details_values> </Details>
+                <Details>Humidity:<Details_values> {weather.humidity}%</Details_values></Details>
                 <Details>Wind speed:<Details_values> {weather.wSpeed} mph</Details_values> </Details>
             </Details_container>
 

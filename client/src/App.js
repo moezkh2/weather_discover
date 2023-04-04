@@ -1,13 +1,12 @@
-/* import './App.css'; */
 import { useEffect, useContext } from 'react';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
-import useWindowSize from './useWindowSize'
-import Card from './Card'
+import useWindowSize from './customHooks/useWindowSize'
+import Card from './components/Card'
 import styled from 'styled-components'
-import InputAuto from './InputAuto'
-import { CoordinatesContext } from './CoordinatesContext';
+import InputAuto from './components/InputAuto'
+import { CoordinatesContext } from './context/CoordinatesContext';
 import axios from 'axios';
-import MainCard from './MainCard';
+import MainCard from './components/MainCard';
 const MainContainer = styled.div`
 display:grid;
 grid-template-rows: 10vh 50vh 1fr;
