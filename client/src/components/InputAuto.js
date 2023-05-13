@@ -80,7 +80,7 @@ const InputAuto = () => {
 
             try {
 
-                const results = await axios.get(`/autosuggest/${textTofetch}`)
+                const results = await axios.get(`api/autosuggest/${textTofetch}`)
                 setSeggestionsResult(results.data)
                 console.log(results)
 

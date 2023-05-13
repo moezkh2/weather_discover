@@ -70,7 +70,7 @@ function App() {
   const fetchWeatherData = async () => {
     try {
 
-      const response = await axios.get(`/weather/${coordinates.lat}/${coordinates.lng}`);
+      const response = await axios.get(`api/weather/${coordinates.lat}/${coordinates.lng}`);
       setWeatherData(response.data.daily)
       console.log(response)
 
