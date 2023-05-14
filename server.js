@@ -1,14 +1,14 @@
 const axios = require('axios');
 const express = require("express");
 const cors = require('cors');
+const path = require("path");
 require('dotenv').config()
 
 const app = express();
- 
-app.use(cors())
 
-/* app.use(express.json()); */
-app.get("api/autosuggest/:at", async function (req, res) {
+app.use(cors());
+ 
+app.get('/api/autosuggest/:at', async function (req, res) {
 
     try {
 
@@ -28,7 +28,7 @@ app.get("api/autosuggest/:at", async function (req, res) {
 
 })
 
-app.get('api/weather/:lat/:lng', async (req, res) => {
+app.get('/api/weather/:lat/:lng', async (req, res) => {
     try {
 
         const response = await axios({
@@ -44,6 +44,7 @@ app.get('api/weather/:lat/:lng', async (req, res) => {
     }
 
 })
+
 
 
 app.use(express.static(path.join(__dirname, "./client/build")));
