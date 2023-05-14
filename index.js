@@ -47,9 +47,7 @@ app.get('/api/weather/:lat/:lng', async (req, res) => {
 
 })
 
-
-
-app.use(express.static(path.join(process.cwd(), "./client/build")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("*", function (_, res) {
   res.sendFile(
