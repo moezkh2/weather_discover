@@ -5,10 +5,10 @@ const CoordinatesContext = createContext()
 const ContextProvider = ({ children }) => {
 
     const [textTofetch, setTextTofetch] = useState("");
-    const [inputState, setInputState] = useState("");
+    const [inputState, setInputState] = useState(" New York");
     const [showSeggestions, setShowSeggestions] = useState(false);
     const [seggestionsResult, setSeggestionsResult] = useState([])
-    const [coordinates, setCoordinates] = useState({})
+    const [coordinates, setCoordinates] = useState({ lat:"40.730610",lng:"-73.935242"})
     const [weatherData, setWeatherData] = useState([])
 
     const sideScroll = (

@@ -23,7 +23,8 @@ grid-row: 3;
 
 const CardContainer = styled.div`
 
-display: inline flow;
+display: flex;
+flex-direction: row;
 justify-content: center;
 gap:15px;
 width:100vw;
@@ -67,12 +68,12 @@ function App() {
   const [isScrollVissible, reff] = useWindowSize();
 
 
+  
   const fetchWeatherData = async () => {
     try {
 
       const response = await axios.get(`api/weather/${coordinates.lat}/${coordinates.lng}`);
       setWeatherData(response.data.daily)
-      console.log(response)
 
     } catch (error) {
       console.log("can't get weather data")
@@ -88,6 +89,7 @@ function App() {
     }
 
   }, [coordinates])
+ 
 
 
   return (

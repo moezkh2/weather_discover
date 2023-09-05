@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useEffect, useContext } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 import { CoordinatesContext } from '../context/CoordinatesContext'
@@ -105,7 +105,7 @@ const InputAuto = () => {
     return (
 
         <InputContainer>
-            {/*  <Label for="input">Location : </Label> */}
+            
             <Input id="input" placeholder="Enter Location" value={inputState} type="text" onChange={onChangehendler}></Input>
 
             <Seggestion show={showSeggestions}>

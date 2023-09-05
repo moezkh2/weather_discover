@@ -6,7 +6,6 @@ function useWindowSize() {
     useLayoutEffect(() => {
         function updateSize() {
             if (reff.current.scrollWidth > reff.current.clientWidth) {
-                console.log(`${reff.current.scrollLeft}/${reff.current.scrollWidth}`)
                 setScrollVissible(true);
             } else {
                 setScrollVissible(false);
