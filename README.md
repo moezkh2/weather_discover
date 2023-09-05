@@ -11,7 +11,7 @@
 
 ## Description
 
-Weather-discover is react app that gives you the weather forecasts for any place in the globe.
+Weather-discover is a react app that gives you the weather forecasts for any place in the globe.
 To get the weather forecasts for the location you want, all you have to do is enter the location in the text input, and you will get some places suggestions,  by clicking one of the suggestions, you will get the weather forecasts for the whole week.
 this app is based on [here.com API](https://www.here.com) for location suggestions and [OpenWeatherMap.com API](https://openweathermap.org/api)  for weather forecasts.
 
@@ -31,8 +31,8 @@ this app is based on [here.com API](https://www.here.com) for location suggestio
 **Backend:** Express, here.com API, OpenWeatherMap.com API
 
 ## Installation
-to clone and run this application, you'll need Git and node.js (which comes with npm) installed on your computer.
-Fom you command line:
+To clone and run this application, you'll need Git and node.js (which comes with npm) installed on your computer.
+For your command line:
 ````
 git clone https://github.com/moezkh2/weather_discover.git
 ````
@@ -45,7 +45,7 @@ install frentend dependencies:
 cd client
 npm install:
 ````
-run dev script to run the backend and the frentend:
+run dev script to run the backend and the frontend:
 ````
 npm run dev
 ````
