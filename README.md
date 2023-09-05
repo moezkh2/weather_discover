@@ -24,7 +24,7 @@ this app is based on [here.com API](https://www.here.com) for location suggestio
 <img src="https://github.com/moezkh2/weather_discover/assets/17712659/8c6ac8d1-feb4-4c77-8be6-a0a42bc34a21" width=550 height=500>
 </div>
 
-## Built With
+## Built With 
 
 **Frontend:** React, styled-components
 
