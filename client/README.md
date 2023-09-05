@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# weather_discover
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<img src="https://github.com/moezkh2/weather_discover/assets/17712659/6f1254a6-1f86-48c6-8900-cde3b697004e" >
+</p>
 
-## Available Scripts
+<div align="center">
+  <img alt="Bower" src="https://img.shields.io/bower/l/mi">
+<a href="https://openweathermap.org/api"><img src="https://img.shields.io/badge/openweathermap.com-API-e96e50?style=flat&logo=#00AFAA&logoColor=00AFAA&link=https://openweathermap.org/api" alt="openweathermap.com" /></a>
+<a href="https://www.here.com/"><img src="https://img.shields.io/badge/here.com-API-blue?style=flat&logo=#00AFAA&logoColor=00AFAA&link=https://www.here.com/" alt="here.com" /></a>
+</div>
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Weather-discover is a react app that gives you the weather forecasts for any place in the globe.
+To get the weather forecasts for the location you want, all you have to do is enter the location in the text input, and you will get some places suggestions, by clicking one of the suggestions, you will get the weather forecasts for the whole week.
+this app is based on [here.com API](https://www.here.com) for location suggestions and [OpenWeatherMap.com API](https://openweathermap.org/api) for weather forecasts.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## [Demo 💥](https://weather-discover.vercel.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
 
-### `npm test`
+<div>
+<img src="https://github.com/moezkh2/weather_discover/assets/17712659/c4c2002b-010e-44fb-8e93-a92b0d5ee3cd" width=300 height=500>
+<img src="https://github.com/moezkh2/weather_discover/assets/17712659/8c6ac8d1-feb4-4c77-8be6-a0a42bc34a21" width=550 height=500>
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Built With
 
-### `npm run build`
+**Frontend:** React, styled-components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Backend:** Express, here.com API, OpenWeatherMap.com API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To clone and run this application, you'll need Git and node.js (which comes with npm) installed on your computer.
+For your command line:
 
-### `npm run eject`
+```
+git clone https://github.com/moezkh2/weather_discover.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+install backend dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+install frentend dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+cd client
+npm install:
+```
 
-## Learn More
+run dev script to run the backend and the frontend:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm run dev
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Environment Variables
 
-### Code Splitting
+To run this project, you will need to add the following environment variables to your .env file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+PORT= "5000"
+DEVELOPER_HERE_KEY="your here.com API key"
+DEVELOPER_HERE_URL="your here.com API URL"
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+OPEN_WEATHER_MAP_KEY="your openweathermap API key"
+OPEN_WEATHER_MAP_URL="your openweathermap API URL"
+```
