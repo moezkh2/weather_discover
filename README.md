@@ -15,7 +15,7 @@ Weather-discover is a react app that gives you the weather forecasts for any pla
 To get the weather forecasts for the location you want, all you have to do is enter the location in the text input, and you will get some places suggestions,  by clicking one of the suggestions, you will get the weather forecasts for the whole week.
 this app is based on [here.com API](https://www.here.com) for location suggestions and [OpenWeatherMap.com API](https://openweathermap.org/api)  for weather forecasts.
 
-## [Demo 💥](weather-discoverv1.vercel.app)
+## [Demo 💥](https://weather-discoverv1.vercel.app/)
 
 ## Usage
 
